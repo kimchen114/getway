@@ -1,0 +1,56 @@
+syntax = "proto3";
+package net.hzbox.vj.contacts.proto;
+
+option java_package = "net.hzbox.vj.contacts.proto";
+option java_outer_classname = "PersonProtos";
+
+message PersonExtensionValue{
+    uint32 id = 1;
+    uint32 person_extentison_id = 2;
+    string value = 3;
+    string name = 4;
+}
+
+message Person {
+	uint32 id = 1;
+    string name = 2;
+    string account = 3;
+    string gender = 4;
+    string depart_name = 5;
+    string job = 6;
+    string mobile = 7;
+    string email = 8;
+    string wechat_id = 9;
+    string birthday = 10;
+    string employed = 11;
+    string company_name = 12;
+    bool hidden = 13;
+    bool bound = 14;
+    string head_image = 15;
+    string top_time = 16;
+    uint32 notify_type =17;
+    repeated PersonExtensionValue extension_values = 18;
+    repeated uint32 depart_ids = 19;
+    repeated uint32 parent_depart_ids = 20;
+    uint32 company_id = 21;
+}
+
+message Persons {
+	string depart_name = 1;
+	uint32 total_count = 2;
+	uint32 total_pages = 3;
+	uint32 page = 4;
+	uint32 size = 5;
+	repeated Person person = 6;
+}
+
+ 
+
+message Result {
+	bool success = 1;
+	string msg = 2;
+	Person person = 3;
+	Persons persons = 4;
+	repeated string show_basic_extension = 5;
+	repeated string show_extension = 6;
+}

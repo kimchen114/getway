@@ -1,0 +1,22 @@
+server:
+  port: 8189
+  use-forward-headers: true
+
+management:
+  security.enabled: false
+#  context-path: /management
+
+spring:
+  application:
+    name: gateway
+
+    
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registry-fetch-interval-seconds: 10
+    serviceUrl:
+      defaultZone: http://aaa:bbb@10.60.50.181:8761/eureka/
+      
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000      

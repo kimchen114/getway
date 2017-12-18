@@ -1,0 +1,26 @@
+
+
+zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+  retryable: true
+  ignoredServices: '*'
+  ignoredPatterns: /*/inner/**,/*/management/**
+  #semaphore.max-semaphores: 300
+  routes:
+    demo1:
+      path: /demo1/**
+      serviceId: demo1
+   
+logging:
+  level:
+    net.hzbox: DEBUG
+---
+spring:
+  profiles: production
+
+logging:
+  level:
+    net.hzbox: INFO
+
