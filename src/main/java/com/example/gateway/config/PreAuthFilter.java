@@ -1,4 +1,4 @@
-package net.hzbox.vj.gateway.zuul.filters;
+package com.example.gateway.config;
 
 import javax.servlet.http.HttpServletRequest;
 

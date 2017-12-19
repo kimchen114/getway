@@ -1,17 +1,14 @@
-package net.hzbox.vj.gateway;
+package com.example.gateway;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.web.client.RestTemplate;
 
-import net.hzbox.vj.gateway.zuul.filters.PreAuthFilter;
+import com.example.gateway.config.PreAuthFilter;
 
 
 @SpringCloudApplication 

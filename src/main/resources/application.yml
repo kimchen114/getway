@@ -19,11 +19,10 @@ zuul:
    
 logging:
   level:
-    net.hzbox: DEBUG
+    com.example: DEBUG
 ---
 spring:
   profiles: production
-
 logging:
   level:
     net.hzbox: INFO
