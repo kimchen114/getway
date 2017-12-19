@@ -6,12 +6,16 @@ zuul:
       enabled: true
   retryable: true
   ignoredServices: '*'
-  ignoredPatterns: /*/inner/**,/*/management/**
+  ignoredPatterns: /*/inner/**,/*/management/**    #被忽略的路径
   #semaphore.max-semaphores: 300
   routes:
-    demo1:
+    demo1: 
       path: /demo1/**
-      serviceId: demo1
+      service-id: demo1
+      sensitive-headers:               #将指定路由的敏感头设置为空
+      custom-sensitive-headers: true   #对指定路由开启自定义敏感头
+        
+    
    
 logging:
   level:

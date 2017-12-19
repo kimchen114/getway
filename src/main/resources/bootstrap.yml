@@ -17,6 +17,6 @@ eureka:
   client:
     registry-fetch-interval-seconds: 10
     serviceUrl:
-      defaultZone: http://aaa:bbb@10.60.50.181:8761/eureka/
+      defaultZone: http://aaa:bbb@10.60.50.25:8761/eureka/
       
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000      
